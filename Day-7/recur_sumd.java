@@ -3,9 +3,9 @@ public class recur_sumd {
     public int sumd(int x, int sum){
         if(x == 0)
             return sum;
-        sum+=x%10;
-        x/=10;
-        return sumd(x,sum);
+        //sum+=x%10;
+        //x/=10;
+        return sumd(x/10,sum+x%10);
     }
     public static void main(String[] args){
         recur_sumd obj = new recur_sumd();

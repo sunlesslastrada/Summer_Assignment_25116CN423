@@ -5,9 +5,9 @@ public class factors {
         System.out.println("Enter a natural number:");
         int n = in.nextInt();
         System.out.println("Factors of "+n+" are:");
-        for(int i = 1;i <= n; i++)
+        for(int i = 1;i*i <= n; i++)
             if(n%i == 0)
-                System.out.print(i+",");
+                System.out.println(i+", "+(n/i));
         in.close();
     }
 }

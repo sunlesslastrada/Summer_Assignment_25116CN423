@@ -5,7 +5,7 @@ public class count_even_odd {
         System.out.println("Enter size of array:");
         int n= in.nextInt();
         if(n<1){
-            System.out.println("Wrong size. Cannot be negative or 0.");
+            System.out.println("Invalid length. Cannot be negative or 0.");
             System.exit(0);
         }
         int arr[] = new int[n], ec=0,oc=0;

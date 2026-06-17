@@ -36,17 +36,15 @@ public class merge_arr {
             }
             c++;
         }
-        if(a == n1){
-            for(int i = c;i < n;i++){
-                arr[i] = arr2[b];
-                b++;
-            }
+        while(a<n1){
+            arr[c] = arr1[a];
+            a++;
+            c++;
         }
-        else{
-            for(int i = c;i < n;i++){
-                arr[i] = arr1[a];
-                a++;
-            }
+        while(b<n2){
+            arr[c] = arr2[b];
+            b++;
+            c++;
         }
         System.out.println("Elements of array:");
         for(int i = 0;i <  n;i++)

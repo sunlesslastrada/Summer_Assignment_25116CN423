@@ -25,38 +25,39 @@ public class union_arr {
             arr2[i]=in.nextInt();
         int n = n1+n2;
         int arr[] = new int[n];
-        int a=0, b=0 ,x = 0;
+        int a=0, b=0 ,x = 0,v;
         while(a<n1 && b<n2){
             if(arr1[a] < arr2[b]){
-                arr[x] = arr1[a];
-                x++;
+                v= arr1[a];
                 a++;
             }
             else if(arr1[a] > arr2[b]){
-                arr[x] = arr2[b];
-                x++;
+                v= arr2[b];
                 b++;
             }
             else{
-                arr[x] = arr1[a];
+                v= arr1[a];
                 a++;
                 b++;
+            }
+            if(x == 0 || arr[x-1] != v){
+                arr[x] = v;
                 x++;
             }
         }
-        if(a == n1){
-            while(b < n2){
+        while(b < n2){
+            if(x == 0 || arr[x-1] != arr2[b]){
                 arr[x] = arr2[b];
                 x++;
-                b++;
             }
+            b++;
         }
-        else{
-            while(a < n1){
+        while(a < n1){
+            if(x ==0 || arr[x-1] != arr1[a]){
                 arr[x] = arr1[a];
                 x++;
-                a++;
             }
+            a++;
         }
         System.out.println("Elements of union array:");
         for(int i = 0;i < x;i++)

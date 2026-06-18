@@ -1,7 +1,6 @@
 import java.util.Scanner;
 public class common_elements_arr {
     public static void main(String[] args){
-        common_elements_arr obj = new common_elements_arr();
         Scanner in = new Scanner(System.in);
         System.out.println("Enter size of 1st array:");
         int n1= in.nextInt();

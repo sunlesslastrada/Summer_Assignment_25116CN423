@@ -22,8 +22,7 @@ public class merge_arr {
         System.out.println("Enter "+n2+" elements for 2nd sorted array:");
         for(int i = 0;i < n2;i++)
             arr2[i]=in.nextInt();
-        int n = n1+n2;
-        int arr[] = new int[n];
+        int arr[] = new int[n1+n2];
         int a=0, b=0, c=0;
         while(a<n1 && b<n2){
             if(arr1[a]>arr2[b]){
@@ -47,7 +46,7 @@ public class merge_arr {
             c++;
         }
         System.out.println("Elements of array:");
-        for(int i = 0;i <  n;i++)
+        for(int i = 0;i < c;i++)
             System.out.print(arr[i]+", ");
         in.close();
     }

@@ -1,7 +1,6 @@
 import java.util.Scanner;
 public class intersection {
     public static void main(String[] args){
-        common_elements_arr obj = new common_elements_arr();
         Scanner in = new Scanner(System.in);
         System.out.println("Enter size of 1st array:");
         int n1= in.nextInt();
@@ -28,15 +27,12 @@ public class intersection {
         int x = 0,a=0,j=0;
         while(j<n2 && a<n1){
             if(arr1[a] == arr2[j]){
-                if(x>0 && arr2[j] == arr[x-1]){
-                    a++;
-                    j++;
-                    continue;
+                if(x==0 || arr2[j] != arr[x-1]){
+                    arr[x] = arr2[j];
+                    x++;
                 }
-                arr[x] = arr2[j];
                 a++;
                 j++;
-                x++;
             }
             else if(arr1[a] < arr2[j])
                 a++;

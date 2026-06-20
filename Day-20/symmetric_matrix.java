@@ -18,8 +18,8 @@ public class symmetric_matrix {
         for(int i = 0;i < r1;i++)
             for(int j = 0;j <c1;j++)
                 m1[i][j]=in.nextInt();
-        for(int i = 0;i < r1/2; i++){
-            for(int j = 0;j < c1/2; j++){
+        for(int i = 0;i < r1; i++){
+            for(int j = i+1;j < c1; j++){
                 if(m1[i][j] != m1[j][i]){
                     System.out.println("Not a symmetric matrix.");
                     System.exit(0);

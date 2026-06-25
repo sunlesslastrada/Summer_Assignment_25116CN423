@@ -164,6 +164,9 @@ public class student_records {
                 System.out.printf("%-22s %-10s %-15s %-15s\n","NAME","ID No.","DIVISION","PERCENTAGE(ANNUAL)");
                 System.out.printf("%-22s %-10d %-15s %-15f\n",name[pos],id[pos],div[pos],per[pos]);
             }
+            else if(ch!=6){
+                System.out.println("Please enter valid choice.");
+            }
         }
         System.out.println("EXITING.");
         System.out.println("Thank you for using this system.");

@@ -132,7 +132,7 @@ public class student_records {
                 System.out.print("NAME: ");
                 name[pos] = in.nextLine();
                 System.out.print("ID No.: ");
-                id[count] = in.nextInt();
+                id[pos] = in.nextInt();
                 in.nextLine();
                 System.out.print("DIVISION: ");
                 div[pos] = in.nextLine();
